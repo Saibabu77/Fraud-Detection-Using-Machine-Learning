@@ -48,6 +48,39 @@ Feature importance is also extracted to highlight key drivers of fraud detection
 
 The final model is saved using `joblib` and applied to unseen samples. Each prediction is accompanied by a fraud probability score.
 
+![image](https://github.com/user-attachments/assets/990d200d-777d-4ba3-8f76-c6efc977f055)
+
+Summary of Prediction Results
+The model was tested on five unseen transaction samples. Out of these:
+
+Three transactions were confidently predicted as fraud with probabilities of 0.99, 0.98, and 0.99.
+
+Two transactions were correctly identified as non-fraud with low probabilities of 0.02 and 0.01.
+
+One transaction, with a probability of 0.06, was still classified as non-fraud, staying below the typical fraud threshold of 0.5.
+
+Conclusion
+The model demonstrates strong predictive performance on this small sample, accurately identifying both fraudulent and legitimate transactions. The high fraud probabilities show that the model responds well to risky patterns, while the low scores for non-fraud suggest low false positive risk. For deployment, further testing on a larger and more varied dataset is recommended, along with regular threshold evaluation to balance sensitivity and precision.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## How to Run
 
 1. Place `synthetic_fraud_dataset.csv` in the project folder
@@ -57,7 +90,7 @@ The final model is saved using `joblib` and applied to unseen samples. Each pred
    ```
 3. Run the Python script or notebook
 4. The trained model will be saved as `random_forest_fraud_model.pkl`
-5. Sample predictions will display fraud probabilities for unseen data
+5. Sample predictions will display fraud probabilities for unseen data.
 
 ## Notes
 
